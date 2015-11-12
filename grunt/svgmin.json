@@ -1,0 +1,17 @@
+{
+    "options": {
+        "plugins": [
+            {
+                "removeViewBox": false
+            }, {
+                "removeUselessStrokeAndFill": false
+            }
+        ]
+    },
+    "sprite": {
+        "files": [{
+            "expand": true,
+            "src": ["src/icons/**/*.svg"]
+        }]
+    }
+}

@@ -1,0 +1,10 @@
+{
+  "server": {
+    "options": {
+      "base": "build",
+      "port": "<%= package.serverport %>",
+      "hostname": "*",
+      "keepalive": true
+    }
+  }
+}

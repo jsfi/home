@@ -1,0 +1,10 @@
+{
+    "options": {
+        "prefix": "icon-"
+    },
+    "icons": {
+        "files": {
+            "build/img/icons.svg": ["src/icons/*.svg"]
+        }
+    }
+}

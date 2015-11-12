@@ -1,0 +1,15 @@
+{
+    "build": {
+        "options": {
+            "layoutDir": "src/views/layouts",
+            "partialDir": "src/views/partials",
+            "data": "src/views/data.json"
+        },
+        "files": [{
+            "expand": true,
+            "cwd": "src/views/templates",
+            "src": ["**/*.*"],
+            "dest": "build"
+        }]
+    }
+}
