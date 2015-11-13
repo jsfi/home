@@ -4,7 +4,7 @@
     },
     "icons": {
         "files": {
-            "build/img/icons.svg": ["src/icons/*.svg"]
+            "src/views/partials/sprite.svg": ["src/sprite/*.svg"]
         }
     }
 }

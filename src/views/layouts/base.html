@@ -5,10 +5,13 @@
         <title>{{ title }}</title>
         <meta name="description" content="{{ description }}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='//fonts.googleapis.com/css?family=Cousine' rel='stylesheet' type='text/css'>
-        {% include "style.html" | partial %}
+        <!--<link href='//fonts.googleapis.com/css?family=Cousine' rel='stylesheet' type='text/css'>-->
+        <link rel="stylesheet" href="/css/main.css">
     </head>
     <body>
+        <div class="sprite">{% include "sprite.svg" | partial %}</div>
+        {% from ("icon.html" | partial) import icon %}
+        {% include "header.html" | partial %}
         {% block content %}{% endblock %}
     </body>
 </html>
