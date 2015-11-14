@@ -13,5 +13,11 @@
             "expand": true,
             "src": ["src/sprite/*.svg"]
         }]
+    },
+    "favicon": {
+        "files": [{
+            "expand": true,
+            "src": ["build/favicon.svg"]
+        }]
     }
 }
