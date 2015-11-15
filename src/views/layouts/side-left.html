@@ -1,0 +1,7 @@
+{% extends "base.html" | layout %}
+{% block content %}
+<div class="content side-left">
+    <main class="main">{% block main %}{% endblock %}</main>
+    <aside class="side">{% block side %}{% endblock %}</aside>
+</div>
+{% endblock %}
