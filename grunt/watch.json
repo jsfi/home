@@ -1,25 +1,25 @@
 {
-  "html_dev": {
-    "files": ["src/views/**/*"],
-    "tasks": ["renderNunjucks"]
-  },
-  "html": {
-    "files": ["build/**/*.html", "build/**/*.php"],
-    "options": { "livereload": true }
-  },
-  "css": {
-    "files": ["build/css/*.css"],
-    "options": { "livereload": true }
-  },
-  "scss": {
-    "files": ["src/scss/**/*.scss"],
-    "tasks": [
-      "sass",
-      "autoprefixer"
-    ]
-  },
-  "js": {
-    "files": ["build/js/*.js"],
-    "options": { "livereload": true }
-  }
+    "html_dev": {
+        "files": ["src/views/**/*"],
+        "tasks": ["renderNunjucks"]
+    },
+    "html": {
+        "files": ["build/**/*.html", "build/**/*.php"],
+        "options": { "livereload": true }
+    },
+    "css": {
+        "files": ["build/css/*.css"],
+        "options": { "livereload": true }
+    },
+    "scss": {
+        "files": ["src/scss/**/*.scss"],
+        "tasks": [
+            "sass",
+            "autoprefixer"
+        ]
+    },
+    "js": {
+        "files": ["build/js/*.js"],
+        "options": { "livereload": true }
+    }
 }
