@@ -74,6 +74,18 @@ textarea {
     resize: vertical;
 }
 
+a {
+    color: $dark;
+
+    &:visited {
+        color: lighten($dark, 25);
+    }
+
+    &:hover {
+        color: $node;
+    }
+}
+
 .sprite {
     display: none;
 }

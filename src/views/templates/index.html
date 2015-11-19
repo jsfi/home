@@ -1,4 +1,38 @@
-{% extends "base.html" | layout %}
-{% block content %}
-Hello World
+{% extends "side-left.html" | layout %}
+{% block main %}
+    <article class="article main__content">
+        <header>
+            <h1 class="article__title">About me</h1>
+        </header>
+
+        <p>My name is Martin Sachse. I am a Front-end Developer since 2011.</p>
+
+        <p>You can find my public work on <a href="https://github.com/jsfi" target="_blank">Github</a> and <a href="https://www.npmjs.com/~jsfi">NPM</a>.</p>
+
+        <p>Additionally you can find me at <a href="https://feds.slack.com/team/msachse">FEDs-Slack</a>, <a href="https://web-a11y.slack.com/team/msachse">Web-A11y-Slack</a> and <a href="https://plus.google.com/+MartinSachse">Google+</a>.</p>
+
+        <p></p>
+
+        <script type="application/ld+json">{
+            "@context": "http://schema.org",
+            "@type": "Person",
+            "name": "Martin Sachse",
+            "givenName": "Martin",
+            "familyName": "Sachse",
+            "image": "todo.png",
+            "email": "mailto:martin.sachse@gmail.com",
+            "jobTitle": "Front-end Developer",
+            "url": "http://jsfi.io",
+            "sameAs": [
+                "https://github.com/jsfi",
+                "https://www.npmjs.com/~jsfi",
+                "https://plus.google.com/+MartinSachse"
+            ],
+            "birthdate": "1987-09-17",
+            "nationality": "DE"
+        }</script>
+    </article>
+{% endblock %}
+
+{% block side %}
 {% endblock %}

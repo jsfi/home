@@ -417,11 +417,81 @@ fieldset {
 textarea {
   resize: vertical; }
 
+a {
+  color: #171717; }
+  a:visited {
+    color: #575757; }
+  a:hover {
+    color: #7dbf38; }
+
 .sprite {
   display: none; }
 
+.main__content,
+.side__content {
+  margin-right: 1.5em;
+  margin-right: 5vw;
+  margin-left: 1.5em;
+  margin-left: 5vw; }
+
+@media screen and (min-width: 1024px) {
+  .side-left {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch; }
+    .side-left .main,
+    .side-left .side {
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1; }
+    .side-left .main {
+      -webkit-flex-basis: 66.666%;
+          -ms-flex-preferred-size: 66.666%;
+              flex-basis: 66.666%;
+      -webkit-box-ordinal-group: 3;
+      -webkit-order: 2;
+          -ms-flex-order: 2;
+              order: 2; }
+      .side-left .main__content {
+        max-width: 640px;
+        margin-right: auto; }
+    .side-left .side {
+      padding-top: 1em;
+      -webkit-flex-basis: 33.333%;
+          -ms-flex-preferred-size: 33.333%;
+              flex-basis: 33.333%;
+      -webkit-box-ordinal-group: 2;
+      -webkit-order: 1;
+          -ms-flex-order: 1;
+              order: 1; }
+      .side-left .side__content {
+        max-width: 320px;
+        margin-right: 0;
+        margin-left: auto; } }
+.sidenav__list {
+  padding-left: 0;
+  list-style: none; }
+.sidenav__element {
+  display: block;
+  text-decoration: none; }
+  .sidenav__element:before {
+    content: "\21E8";
+    margin-right: .5em;
+    margin-left: .5em; }
+
+.header {
+  margin-bottom: 1em;
+  margin-bottom: 2vh; }
+
 .logo {
   display: block;
+  padding: 1em 3em;
   padding: 2vh 5vw;
   color: #171717;
   background-image: -webkit-linear-gradient(315deg, #f3df49 33.333%, #7dbf38 33.333%, #7dbf38 66.666%, #e2007a 66.666%);
@@ -431,6 +501,7 @@ textarea {
   display: block;
   margin-right: auto;
   margin-left: auto;
+  height: 6em;
   height: 10vh;
   font-family: Cousine, monospace;
   fill: currentColor; }
@@ -440,17 +511,21 @@ textarea {
   max-height: 14vh;
   position: absolute;
   right: 0;
-  top: 0;
-  fill: #fafafa;
-  color: #e2007a; }
-  .github-corner:hover .octo-arm {
-    -webkit-animation: octocat-wave 560ms ease-in-out;
-            animation: octocat-wave 560ms ease-in-out; }
+  top: 0; }
 
-.icon-octo-cat {
-  height: 5em; }
+.octo {
+  fill: #fafafa; }
+  .octo__arm, .octo__body {
+    fill: #e2007a; }
+  .octo__arm {
+    -webkit-transform-origin: 130px 106px;
+        -ms-transform-origin: 130px 106px;
+            transform-origin: 130px 106px; }
+    .octo:hover .octo__arm {
+      -webkit-animation: octo-wave 560ms ease-in-out;
+              animation: octo-wave 560ms ease-in-out; }
 
-@-webkit-keyframes octocat-wave {
+@-webkit-keyframes octo-wave {
   0%, 100% {
     -webkit-transform: rotate(0);
             transform: rotate(0); }
@@ -461,7 +536,7 @@ textarea {
     -webkit-transform: rotate(10deg);
             transform: rotate(10deg); } }
 
-@keyframes octocat-wave {
+@keyframes octo-wave {
   0%, 100% {
     -webkit-transform: rotate(0);
             transform: rotate(0); }
@@ -472,12 +547,16 @@ textarea {
     -webkit-transform: rotate(10deg);
             transform: rotate(10deg); } }
 @media (max-width: 500px) {
-  .github-corner .octo-arm {
-    -webkit-animation: octocat-wave 560ms ease-in-out;
-            animation: octocat-wave 560ms ease-in-out; }
-  .github-corner:hover .octo-arm {
-    -webkit-animation: none;
-            animation: none; } }
+  .octo__arm {
+    -webkit-animation: octo-wave 560ms ease-in-out;
+            animation: octo-wave 560ms ease-in-out; }
+    .octo:hover .octo__arm {
+      -webkit-animation: none;
+              animation: none; } }
+.article__title {
+  margin-top: .5em;
+  margin-bottom: .5em; }
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */

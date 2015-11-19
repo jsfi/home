@@ -1,3 +1,11 @@
+.main__content,
+.side__content {
+    margin-right: 1.5em;
+    margin-right: 5vw;
+    margin-left: 1.5em;
+    margin-left: 5vw;
+}
+
 @media screen and (min-width: 1024px) {
     .side-left {
         display: flex;
@@ -11,16 +19,23 @@
         .main {
             flex-basis: 66.666%;
             order: 2;
+
+            &__content {
+                max-width: 640px;
+                margin-right: auto;
+            }
         }
 
         .side {
+            padding-top: 1em;
             flex-basis: 33.333%;
             order: 1;
-        }
 
-        .side-content {
-            max-width: 320px;
-            margin-left: auto;
+            &__content {
+                max-width: 320px;
+                margin-right: 0;
+                margin-left: auto;
+            }
         }
     }
 }

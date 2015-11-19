@@ -1,0 +1,17 @@
+.sidenav {
+    &__list {
+        padding-left: 0;
+        list-style: none;
+    }
+
+    &__element {
+        display: block;
+        text-decoration: none;
+
+        &:before {
+            content: "\21E8";
+            margin-right: .5em;
+            margin-left: .5em;
+        }
+    }
+}

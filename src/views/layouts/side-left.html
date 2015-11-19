@@ -2,6 +2,15 @@
 {% block content %}
 <div class="content side-left">
     <main class="main">{% block main %}{% endblock %}</main>
-    <aside class="side">{% block side %}{% endblock %}</aside>
+    <aside class="side">
+        {% block side %}{% endblock %}
+        <nav class="sidenav side__content">
+            <ul class="sidenav__list">
+                <li class="sidenav__item">
+                    <a href="/tool/contrast-ratio" class="sidenav__element">Contrast Ratio</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
 </div>
 {% endblock %}

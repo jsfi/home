@@ -4,21 +4,26 @@
     position: absolute;
     right: 0;
     top: 0;
-    fill: $light;
-    color: $jsconf;
+}
 
-    &:hover {
-        .octo-arm {
-            animation: octocat-wave 560ms ease-in-out;
+.octo {
+    fill: $light;
+
+    &__arm,
+    &__body {
+        fill: $jsconf;
+    }
+
+    &__arm {
+        transform-origin:130px 106px;
+
+        .octo:hover & {
+            animation: octo-wave 560ms ease-in-out;
         }
     }
 }
 
-.icon-octo-cat {
-    height: 5em;
-}
-
-@keyframes octocat-wave {
+@keyframes octo-wave {
     0%, 100% {
         transform: rotate(0);
     }
@@ -33,13 +38,11 @@
 }
 
 @media (max-width:500px) {
-    .github-corner {
-        .octo-arm{
-            animation: octocat-wave 560ms ease-in-out
-        }
+    .octo {
+        &__arm{
+            animation: octo-wave 560ms ease-in-out;
 
-        &:hover {
-            .octo-arm {
+            .octo:hover & {
                 animation: none
             }
         }
