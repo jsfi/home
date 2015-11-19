@@ -487,15 +487,19 @@ a {
 
 .header {
   margin-bottom: 1em;
-  margin-bottom: 2vh; }
+  margin-bottom: 2vh;
+  position: relative; }
 
 .logo {
   display: block;
   padding: 1em 3em;
   padding: 2vh 5vw;
+  text-decoration: none;
   color: #171717;
   background-image: -webkit-linear-gradient(315deg, #f3df49 33.333%, #7dbf38 33.333%, #7dbf38 66.666%, #e2007a 66.666%);
   background-image: linear-gradient(135deg, #f3df49 33.333%, #7dbf38 33.333%, #7dbf38 66.666%, #e2007a 66.666%); }
+  .logo:hover {
+    color: #171717; }
 
 .icon-logo {
   display: block;
@@ -503,12 +507,13 @@ a {
   margin-left: auto;
   height: 6em;
   height: 10vh;
+  min-height: 50px;
   font-family: Cousine, monospace;
   fill: currentColor; }
 
 .github-corner {
   height: 80px;
-  max-height: 14vh;
+  max-height: 100%;
   position: absolute;
   right: 0;
   top: 0; }
