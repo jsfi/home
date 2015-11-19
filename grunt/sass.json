@@ -7,5 +7,17 @@
             "dest": "build/css",
             "ext": ".css"
         }]
+    },
+    "dist": {
+        "options": {
+            "style": "compressed"
+        },
+        "files": [{
+            "expand": true,
+            "cwd": "src/scss",
+            "src": ["**/*.scss"],
+            "dest": "dist/css",
+            "ext": ".css"
+        }]
     }
 }

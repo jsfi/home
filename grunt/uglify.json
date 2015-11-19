@@ -1,0 +1,10 @@
+{
+    "dist": {
+        "files": [{
+            "expand": true,
+            "cwd": "build",
+            "src": ["**/*.js"],
+            "dest": "dist"
+        }]
+    }
+}

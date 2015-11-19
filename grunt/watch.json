@@ -14,7 +14,7 @@
     "scss": {
         "files": ["src/scss/**/*.scss"],
         "tasks": [
-            "sass",
+            "sass:build",
             "autoprefixer"
         ]
     },

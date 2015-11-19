@@ -7,8 +7,8 @@
         },
         "files": [{
             "expand": true,
-            "cwd": "src",
-            "src": ["**/*.*"],
+            "cwd": "build",
+            "src": ["**/*.html"],
             "dest": "dist"
         }]
     }
