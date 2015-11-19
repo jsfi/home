@@ -1,0 +1,3 @@
+[submodule "submodules/contrast-ratio"]
+	path = submodules/contrast-ratio
+	url = git@github.com:jsfi/contrast-ratio.git
