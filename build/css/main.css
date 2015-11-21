@@ -427,6 +427,12 @@ a {
 .sprite {
   display: none; }
 
+.goto {
+  text-decoration: none; }
+  .goto:before {
+    content: "\21E8";
+    margin-right: .5em; }
+
 .main__content,
 .side__content {
   margin-right: 1.5em;
@@ -625,8 +631,5 @@ a {
 
 .clearfix:after {
   clear: both; }
-
-.sprite {
-  display: none; }
 
 /*# sourceMappingURL=main.css.map */

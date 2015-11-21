@@ -86,6 +86,16 @@ a {
     }
 }
 
+
 .sprite {
     display: none;
+}
+
+.goto {
+    text-decoration: none;
+
+    &:before {
+        content: "\21E8";
+        margin-right: .5em;
+    }
 }

@@ -1,4 +1,9 @@
 {
     "title": "JSFi.io",
-    "description": "JavaScript Fidelity"
+    "description": "JavaScript Fidelity",
+    "pages": {
+        "index.html": {
+            "home": true
+        }
+    }
 }
