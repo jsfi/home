@@ -8,7 +8,7 @@
         "files": [{
             "expand": true,
             "cwd": "src/views/templates",
-            "src": ["**/*.*"],
+            "src": ["**/*.html*"],
             "dest": "build"
         }]
     }
