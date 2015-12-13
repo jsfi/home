@@ -568,6 +568,13 @@ a {
   margin-top: .5em;
   margin-bottom: .5em; }
 
+[type="text"] {
+  width: 100%;
+  padding: .25em 1em;
+  border: 1px solid #171717;
+  border-radius: .25em;
+  box-sizing: border-box; }
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */

@@ -9,6 +9,7 @@
         <link rel='manifest' href='/manifest.json'>
         <!--<link href='//fonts.googleapis.com/css?family=Cousine' rel='stylesheet' type='text/css'>-->
         <link rel="stylesheet" href="/css/main.css">
+        {% block addstyles %}{% endblock %}
     </head>
     <body>
         <div class="sprite">{% include "sprite.svg" | partial %}</div>

@@ -1,0 +1,34 @@
+{% extends "side-left.html" | layout %}
+{% block addstyles %}
+<style>
+.pass-form__submit {
+    width: 100%;
+    margin: 1em 0;
+    background: none;
+    border: 0;
+}
+
+.pass-form__submit:before {
+    content: "\21D2";
+}
+</style>
+{% endblock %}
+{% block main %}
+    <article class="article main__content">
+        <header>
+            <h1 class="article__title">create htpasswd</h1>
+        </header>
+
+        <form action="#" id="pass-form">
+            <label class="">Password: <input type="text" id="pass"></label>
+            <button type="submit" class="pass-form__submit"><span class="visuallyhidden">encrypt</span></button>
+        </form>
+        <input type="text" readonly="" id="pass-enc">
+        <p>The password will be encrypted (md5) on the client. No info of the original or encrypted password will leave your browser.</p>
+        <p>Enable .htpasswd:<br>AuthType Basic<br>AuthName "Login"<br>AuthUserFile /path/to/.htpasswd<br>Require valid-user</p>
+        <p>For additional htaccess snippets: <a href="https://github.com/phanan/htaccess" target="_blank">https://github.com/phanan/htaccess</a></p>
+    </article>
+    <script src="htpasswd.js"></script>
+{% endblock %}
+
+{% block side %}{% endblock %}
