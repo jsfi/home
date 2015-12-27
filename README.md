@@ -4,5 +4,4 @@
 
 ##Todos
 
-deploy htaccess
 extend service-worker
