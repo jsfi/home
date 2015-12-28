@@ -575,6 +575,13 @@ a {
   border-radius: .25em;
   box-sizing: border-box; }
 
+.main_not-found {
+  max-width: 1024px;
+  margin-right: auto;
+  margin-left: auto; }
+  .main_not-found .article__title {
+    text-align: center; }
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
