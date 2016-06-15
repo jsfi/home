@@ -1,4 +1,10 @@
-.article__title {
-    margin-top: .5em;
-    margin-bottom: .5em;
+.article {
+    &__title {
+        margin-top: .5em;
+        margin-bottom: .5em;
+    }
+
+    ol {
+        list-style: none;
+    }
 }
