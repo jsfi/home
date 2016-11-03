@@ -114,24 +114,24 @@
 
 	    temp = md5.rstr(msg);
 
-	    var msg2 = undefined;
-	    for (var i = 0; i < 1000; i++) {
+	    var msg2 = void 0;
+	    for (var _i = 0; _i < 1000; _i++) {
 	        msg2 = '';
 
-	        if (i & 1) {
+	        if (_i & 1) {
 	            msg2 += password;
 	        } else {
 	            msg2 += temp.substr(0, 16);
 	        }
 
-	        if (i % 3) {
+	        if (_i % 3) {
 	            msg2 += salt;
 	        }
 
-	        if (i % 7) {
+	        if (_i % 7) {
 	            msg2 += password;
 	        }
-	        if (i & 1) {
+	        if (_i & 1) {
 	            msg2 += temp.substr(0, 16);
 	        } else {
 	            msg2 += password;
@@ -155,12 +155,40 @@
 	// shim for using process in browser
 
 	var process = module.exports = {};
+
+	// cached from whatever global is present so that test runners that stub it
+	// don't break things.  But we need to wrap it in a try catch in case it is
+	// wrapped in strict mode code which doesn't define any globals.  It's inside a
+	// function because try/catches deoptimize in certain engines.
+
+	var cachedSetTimeout;
+	var cachedClearTimeout;
+
+	(function () {
+	    try {
+	        cachedSetTimeout = setTimeout;
+	    } catch (e) {
+	        cachedSetTimeout = function cachedSetTimeout() {
+	            throw new Error('setTimeout is not defined');
+	        };
+	    }
+	    try {
+	        cachedClearTimeout = clearTimeout;
+	    } catch (e) {
+	        cachedClearTimeout = function cachedClearTimeout() {
+	            throw new Error('clearTimeout is not defined');
+	        };
+	    }
+	})();
 	var queue = [];
 	var draining = false;
 	var currentQueue;
 	var queueIndex = -1;
 
 	function cleanUpNextTick() {
+	    if (!draining || !currentQueue) {
+	        return;
+	    }
 	    draining = false;
 	    if (currentQueue.length) {
 	        queue = currentQueue.concat(queue);
@@ -176,7 +204,7 @@
 	    if (draining) {
 	        return;
 	    }
-	    var timeout = setTimeout(cleanUpNextTick);
+	    var timeout = cachedSetTimeout(cleanUpNextTick);
 	    draining = true;
 
 	    var len = queue.length;
@@ -193,7 +221,7 @@
 	    }
 	    currentQueue = null;
 	    draining = false;
-	    clearTimeout(timeout);
+	    cachedClearTimeout(timeout);
 	}
 
 	process.nextTick = function (fun) {
@@ -205,7 +233,7 @@
 	    }
 	    queue.push(new Item(fun, args));
 	    if (queue.length === 1 && !draining) {
-	        setTimeout(drainQueue, 0);
+	        cachedSetTimeout(drainQueue, 0);
 	    }
 	};
 
